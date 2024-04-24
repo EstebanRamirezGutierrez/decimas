@@ -31,7 +31,7 @@
 
       <div id="container">
         <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <p>Johan Esteban Ramirez<a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
     </ion-content>
   </ion-page>
@@ -42,11 +42,11 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel
 import { defineComponent, ref } from 'vue'; 
 
 // Importar los componentes de los botones
-import IngresarButton from './IngresarButton.vue';
-import SalirButton from './SalirButton.vue';
-import AñadirButton from './AñadirButton.vue';
-import UpdateButton from './UpdateButton.vue';
-import EliminarButton from './EliminarButton.vue';
+import IngresarButton from '@/components/IngresarButton.vue';
+import SalirButton from '@/components/SalirButton.vue';
+import AñadirButton from '@/components/AñadirButton.vue';
+import UpdateButton from '@/components/UpdateButton.vue';
+import EliminarButton from '@/components/EliminarButton.vue';
 
 defineComponent({
   name: 'HomePage',
