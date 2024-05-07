@@ -1,0 +1,8 @@
+{
+  "name": "frame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "id": "bf45722a"
+}
