@@ -1,7 +1,0 @@
-{
-  "name": "login",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue-vite"
-}
