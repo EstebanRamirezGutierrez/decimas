@@ -1,8 +1,10 @@
 package com.corhuila.proyecto.Controller;
 
 import com.corhuila.proyecto.Entity.Carro;
+import com.corhuila.proyecto.Entity.Categoria;
 import com.corhuila.proyecto.IService.ICarroService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,27 +19,27 @@ public class CarroController {
     ICarroService service;
 
     @PostMapping("")
-    public Carro save(@RequestBody Carro carro) {
-        return service.save(carro);
+    public Carro save(@RequestBody Carro carro){
+         return service.save(carro);
     }
 
     @PutMapping("/{id}")
-    public void update(@RequestBody Carro carro, @PathVariable Long id) {
+    public void update(@RequestBody Carro carro, @PathVariable Long id){
         service.update(carro, id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable Long id){
         service.delete(id);
     }
 
     @GetMapping("")
-    public List<Carro> findAll() {
+    public List<Carro> findAll(){
         return service.findAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Carro> findById(@PathVariable Long id) {
+    public Optional<Carro> findById(@PathVariable Long id){
         return service.findById(id);
     }
 }

@@ -15,16 +15,16 @@ public class CarroService implements ICarroService {
     private ICarroRepository repository;
 
     @Override
-    public Carro save(Carro carro) {
-        return repository.save(carro);
+    public Carro save(Carro Carro) {
+        return repository.save(Carro);
     }
 
     @Override
     public void update(Carro carro, Long id) {
-        // Buscar si existe el dato con ese id
+        //Buscar si existe el dato con ese id
         Optional<Carro> optional = repository.findById(id);
 
-        // Si existe, se actualiza
+        //Si existe, se actualiza
         if (optional.isPresent()) {
             Carro carroUpdate = optional.get();
             carroUpdate.setMarca(carro.getMarca());
@@ -34,9 +34,10 @@ public class CarroService implements ICarroService {
             carroUpdate.setCategoriaId(carro.getCategoriaId());
             carroUpdate.setUsuarioId(carro.getUsuarioId());
             repository.save(carroUpdate);
-        } else {
+        }else{
             throw new RuntimeException("No existe el registro para actualizar");
         }
+
     }
 
     @Override
